@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css?family=Baumans|Codystar|Gruppo|Krona+One|Jura|Rajdhani|Raleway+Dots|Shadows+Into+Light+Two|Titillium+Web");
+
+*{
+	font-family: "Jura";
+	line-height: 20px;
+	letter-spacing: 1.2px;
+	word-spacing: 1.5px;
+}
+
+a:link,a:visited{
+	color: orange;
+	text-decoration: none;
+}
+
+a:hover,a:active{
+	color: red;
+}
+
+#mainMenu{
+	display: none;
+}
+
+@media screen and (min-width: 800px){
+	#mainMenu{
+		display: block;
+	}
+
+	#subMenu{
+		display: none;
+	}
+}
+
+aside{
+	position: fixed;
+	bottom: 0px;
+	right: 5%;
+	z-index: 1;
+}
+
+#top{
+	background-color: rgba(255, 122, 11, 0.5);
+	height: 30px;
+	padding: 5px;
+	border: none;
+	border-radius: 5px 5px 0px 0px;
+	box-shadow: 0px 0px 30px 10px white;
+
+	transition: height 0.6s ease;
+}
+
+#top:hover{
+	height: 70px;
+}
+
+.uk-background-default{
+	background-color: rgba(255,255,255,0.8);
+}
+
+.uk-navbar-nav>li.uk-active>a{
+	color: red;
+}
+
+.uk-navbar-nav>li>a{
+	font-family: "Jura";
+	font-size: 20px;
+}
+
+.uk-offcanvas-bar{
+	box-shadow: 0px 0px 30px 10px white;
+	background-color: rgba(0,0,0,0.8);
+}
+
+.uk-overlay>h2{
+	font-family: "Codystar";
+	font-weight: bold;
+	text-shadow: 5px 5px 5px black;
+}
+
+.uk-table-hover tbody tr:hover{
+	background-color: rgba(191, 255, 0, 0.5);
+}
+
+.uk-search-default,.uk-input,.uk-select,.uk-textarea{
+	background-color: rgba(191, 255, 0, 0.5);
+}
+.uk-input:focus,.uk-input:hover,.uk-search-default:focus,.uk-search-default:hover,.uk-textarea:focus,.uk-textarea:hover{
+	background-color: rgba(255, 166, 48, 0.5);
+}
+
+.uk-notification-message{
+	background-color: rgba(191, 255, 0, 1);
+}
+
+#ad iframe{
+	width: 100%;
+	height: 300px;
+}
+
+#quote,#searchNews{
+	width: 100%;
+}
+
+#searchJob{
+	min-width: 30%;
+}
+
+#stockChart{
+	position: relative;
+	width: 100%;
+	height: 400px;
+}
+
+#map{
+	width: 100%;
+	height: 600px;
+}
+
+.important{
+	color: red;
+}

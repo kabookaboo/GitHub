@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Orange Daily">
+	<meta name="keywords" content="orange daily,orange,daily,news,newspaper,media">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Orange Daily</title>
+
+	<link rel="icon" type="image/png" href="image/orange.png">
+	<link rel="stylesheet" type="text/css" href="css/uikit.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/uikit.min.js"></script>
+	<script type="text/javascript" src="js/uikit-icons.min.js"></script>
+	<script type="text/javascript" src="js/jquery.canvasjs.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaLaaURdDZxg4-VlDybKkbFtnsUE2cImk&language=en&callback=showMap" async defer></script>
+</head>
+
+<body>
+	<header>
+		<!-- navigation -->
+		<nav class="uk-background-default" uk-navbar uk-sticky>
+			<div class="uk-navbar-left">
+				<a class="uk-logo uk-navbar-item" href="">Orange Daily</a>
+			</div>
+
+			<div id="mainMenu" class="uk-navbar-right">
+				<ul class="uk-navbar-nav uk-navbar-item" uk-scrollspy-nav="closest: li;">
+					<li><a href="#home" uk-scroll>Home</a></li>
+					<li><a href="#news" uk-scroll>News</a></li>
+					<li><a href="#finance" uk-scroll>Finance</a></li>
+					<li><a href="#job" uk-scroll>Job</a></li>
+					<li><a href="#sports" uk-scroll>Sports</a></li>
+					<li><a href="#contact" uk-scroll>Contact</a></li>
+					<!-- <li><a href="#" uk-scroll></a></li> -->
+				</ul>
+			</div>
+
+			<!-- off-canvas sidebar -->
+			<div id="subMenu" class="uk-navbar-right">
+				<a class="uk-navbar-toggle" href="" uk-toggle="target: #slideMenu" uk-navbar-toggle-icon></a>
+			</div>
+			<div id="slideMenu" uk-offcanvas="mode: slide;overlay: true;flip: true;">
+				<div class="uk-offcanvas-bar uk-flex uk-flex-column">
+					<button class="uk-offcanvas-close" type="button" uk-close></button>
+
+					<ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical" uk-scrollspy-nav="closest: li;">
+						<li><a href="#home" uk-scroll>Home</a></li>
+						<li><a href="#news" uk-scroll>News</a></li>
+						<li><a href="#finance" uk-scroll>Finance</a></li>
+						<li><a href="#job" uk-scroll>Job</a></li>
+						<li><a href="#sports" uk-scroll>Sports</a></li>
+						<li><a href="#contact" uk-scroll>Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<aside>
+			<button id="top"><a href="#home" uk-scroll uk-totop></a></button>
+		</aside>
+
+		<!-- slider -->
+		<div id="home" class="uk-light uk-visible-toggle" uk-slideshow="animation: fade;autoplay: true;autoplay-interval: 5000;pause-on-hover: false;">
+			<ul class="uk-slideshow-items" uk-height-viewport="offset-top: true">
+				<li class="uk-animation-kenburns">
+					<img id="google-1-image0" src="" alt="Headline" uk-cover>
+					<div class="uk-overlay uk-position-center">
+						<h2 id="google-1-title0" class="uk-animation-slide-top-medium"></h2>
+					</div>
+				</li>
+				<li class="uk-animation-kenburns">
+					<img id="google-1-image1" src="" alt="Headline" uk-cover>
+					<div class="uk-overlay uk-position-center">
+						<h2 id="google-1-title1" class="uk-animation-slide-top-medium"></h2>
+					</div>
+				</li>
+				<li class="uk-animation-kenburns">
+					<img id="google-1-image2" src="" alt="Headline" uk-cover>
+					<div class="uk-overlay uk-position-center">
+						<h2 id="google-1-title2" class="uk-animation-slide-top-medium"></h2>
+					</div>
+				</li>
+			</ul>
+
+			<a class="uk-position-center-left uk-position-small uk-hidden-hover" href="" uk-slideshow-item="previous" uk-slidenav-previous></a>
+			<a class="uk-position-center-right uk-position-small uk-hidden-hover" href="" uk-slideshow-item="next" uk-slidenav-next></a>
+
+			<div class="uk-position-bottom-center uk-position-small">
+				<ul class="uk-dotnav">
+					<li uk-slideshow-item="0"><a href=""></a></li>
+					<li uk-slideshow-item="1"><a href=""></a></li>
+					<li uk-slideshow-item="2"><a href=""></a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<br>
+
+	<main class="uk-container uk-container-expand">
+		<!-- news -->
+		<h1 id="news" class="uk-heading-divider">News</h1>
+		<div uk-grid>
+			<div class="uk-width-2-3@m" uk-lightbox="animation: fade">
+				<div class="uk-card uk-card-default uk-card-hover" uk-scrollspy="target: a;cls: uk-animation-fade;delay: 500;">
+					<a id="google-2-image3" class="uk-inline" href="" caption="">
+						<div class="uk-card-media-top">
+							<img id="google-1-image3" src="" alt="">
+						</div>
+						<div class="uk-card-body">
+							<h3 id="google-1-title3"></h3>
+							<p id="google-1-description3"></p>
+						</div>
+					</a>
+				</div>
+
+				<div class="uk-grid-match uk-margin-top" uk-grid>
+					<div class="uk-width-1-2@m">
+						<div class="uk-card uk-card-default uk-card-hover" uk-scrollspy="target: a;cls: uk-animation-fade;delay: 500;">
+							<a id="google-2-image4" class="uk-inline" href="" caption="">
+								<div class="uk-card-media-top">
+									<img id="google-1-image4" src="" alt="">
+								</div>
+								<div class="uk-card-body">
+									<h3 id="google-1-title4"></h3>
+									<p id="google-1-description4"></p>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="uk-width-1-2@m">
+						<div class="uk-card uk-card-default uk-card-hover" uk-scrollspy="target: a;cls: uk-animation-fade;delay: 500;">
+							<a id="google-2-image5" class="uk-inline" href="" caption="">
+								<div class="uk-card-media-top">
+									<img id="google-1-image5" src="" alt="">
+								</div>
+								<div class="uk-card-body">
+									<h3 id="google-1-title5"></h3>
+									<p id="google-1-description5"></p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="uk-grid-match uk-margin-top" uk-grid>
+					<div class="uk-width-1-2@m">
+						<div class="uk-card uk-card-default uk-card-hover" uk-scrollspy="target: a;cls: uk-animation-fade;delay: 500;">
+							<a id="google-2-image6" class="uk-inline" href="" caption="">
+								<div class="uk-card-media-top">
+									<img id="google-1-image6" src="" alt="">
+								</div>
+								<div class="uk-card-body">
+									<h3 id="google-1-title6"></h3>
+									<p id="google-1-description6"></p>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="uk-width-1-2@m">
+						<div class="uk-card uk-card-default uk-card-hover" uk-scrollspy="target: a;cls: uk-animation-fade;delay: 500;">
+							<a id="google-2-image3" class="uk-inline" href="" caption="">
+								<div class="uk-card-media-top">
+									<img id="google-1-image7" src="" alt="">
+								</div>
+								<div class="uk-card-body">
+									<h3 id="google-1-title7"></h3>
+									<p id="google-1-description7"></p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="uk-width-1-3@m">
+				<h3 class="uk-heading-bullet">Weather</h3>
+				<form>
+					<select class="uk-select" onchange="weather(this.value);">
+						<option value="Hong Kong">Hong Kong</option>
+						<option value="New York">New York</option>
+						<option value="London">London</option>
+						<option value="Japan">Japan</option>
+						<option value="Korea">Korea</option>
+					</select>
+				</form>
+				<p id="dt"></p>
+				<table class="uk-table uk-table-divider uk-table-hover uk-table-responsive" uk-scrollspy="target: tr;cls: uk-animation-fade;delay: 500;">
+					<tr>
+						<th>Temperature</th><td id="temp"></td>
+					</tr>
+					<tr>
+						<th>Range</th><td id="range"></td>
+					</tr>
+					<tr>
+						<th>Humidity</th><td id="humidity"></td>
+					</tr>
+					<tr>
+						<th>Wind Speed</th><td id="windSpeed"></td>
+					</tr>
+					<tr>
+						<th>Pressure</th><td id="pressure"></td>
+					</tr>
+					<tr>
+						<th>Visibility</th><td id="visibility"></td>
+					</tr>
+					<tr>
+						<th>Description</th><td id="description"></td>
+					</tr>
+				</table>
+				<div id="ad" uk-scrollspy="target: iframe;cls: uk-animation-fade;delay: 500;">
+					<iframe src="https://www.youtube.com/embed/0vDUTZDrEzo?autoplay=1&mute=1&showinfo=0"></iframe>
+				</div>
+				<br>
+				<h3 class="uk-heading-bullet">News Search</h3>
+				<form id="searchNews" class="uk-search uk-search-default" onsubmit="news(document.getElementById('newsType').value);return false;">
+					<span class="uk-search-icon-flip" uk-search-icon></span>
+					<input id="newsType" class="uk-search-input" type="search" name="" placeholder="Enter the content e.g. bloomberg">
+				</form>
+				<ol id="newsSearch" uk-scrollspy="target: li;cls: uk-animation-fade;delay: 500;"></ol>
+			</div>
+		</div>
+
+		<br>
+
+		<!-- finance -->
+		<h1 id="finance" class="uk-heading-divider">Finance</h1>
+		<div>
+			<div class="uk-background-secondary uk-light uk-grid-collapse" uk-grid uk-scrollspy="target: div;cls: uk-animation-fade;delay: 500;">
+				<div class="uk-width-2-3@m">
+					<img id="cnbc-1-image0" src="">
+				</div>
+				<div class="uk-width-1-3@m">
+					<div class="uk-card-body">
+						<h3 id="cnbc-1-title0"></h3>
+						<p id="cnbc-1-description0"></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="uk-grid-match uk-margin-top uk-child-width-1-4@m" uk-grid uk-lightbox="animation: fade" uk-scrollspy="target: div;cls: uk-animation-fade;delay: 500;">
+				<div>
+					<div class="uk-card uk-card-default uk-card-hover">
+						<a id="cnbc-2-image1" class="uk-inline" href="" caption="">
+							<div class="uk-card-media-top">
+								<img id="cnbc-1-image1" src="" alt="">
+							</div>
+							<div class="uk-card-body">
+								<p id="cnbc-1-title1"></p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-hover">
+						<a id="cnbc-2-image2" class="uk-inline" href="" caption="">
+							<div class="uk-card-media-top">
+								<img id="cnbc-1-image2" src="" alt="">
+							</div>
+							<div class="uk-card-body">
+								<p id="cnbc-1-title2"></p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-hover">
+						<a id="cnbc-2-image3" class="uk-inline" href="" caption="">
+							<div class="uk-card-media-top">
+								<img id="cnbc-1-image3" src="" alt="">
+							</div>
+							<div class="uk-card-body">
+								<p id="cnbc-1-title3"></p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div>
+					<h3 class="uk-heading-bullet">Currency Exchange</h3>
+					<form id="exchange" class="uk-form-stacked" onsubmit="return false;">
+						<div>
+							<label class="uk-form-label">From</label>
+							<select id="fromCurrency" class="uk-select">
+								<option value="USD">USD</option>
+								<option value="HKD">HKD</option>
+								<option value="CNY">CNY</option>
+								<option value="JPY">JPY</option>
+							</select>
+						</div>
+						<div>
+							<label class="uk-form-label">To</label>
+							<select id="toCurrency" class="uk-select">
+								<option value="USD">USD</option>
+								<option value="HKD" selected="selected">HKD</option>
+								<option value="CNY">CNY</option>
+								<option value="JPY">JPY</option>
+							</select>
+						</div>
+						<div>
+							<label class="uk-form-label">Amount</label>
+							<input class="uk-input" type="text" name="" onchange="exchange(document.getElementById('fromCurrency').value,document.getElementById('toCurrency').value,this.value)" oninput="exchange(document.getElementById('fromCurrency').value,document.getElementById('toCurrency').value,this.value)" placeholder="Enter the amount e.g. 1000">
+						</div>
+						<p id="newAmount"></p>
+					</form>
+				</div>
+			</div>
+
+			<div class="uk-grid-match uk-margin-top uk-child-width-1-4@m" uk-grid uk-lightbox="animation: fade" uk-scrollspy="target: div;cls: uk-animation-fade;delay: 500;">
+				<div>
+					<div class="uk-card uk-card-default uk-card-hover">
+						<a id="cnbc-2-image4" class="uk-inline" href="" caption="">
+							<div class="uk-card-media-top">
+								<img id="cnbc-1-image4" src="" alt="">
+							</div>
+							<div class="uk-card-body">
+								<p id="cnbc-1-title4"></p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-hover">
+						<a id="cnbc-2-image5" class="uk-inline" href="" caption="">
+							<div class="uk-card-media-top">
+								<img id="cnbc-1-image5" src="" alt="">
+							</div>
+							<div class="uk-card-body">
+								<p id="cnbc-1-title5"></p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-hover">
+						<a id="cnbc-2-image6" class="uk-inline" href="" caption="">
+							<div class="uk-card-media-top">
+								<img id="cnbc-1-image6" src="" alt="">
+							</div>
+							<div class="uk-card-body">
+								<p id="cnbc-1-title6"></p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-hover">
+						<a id="cnbc-2-image7" class="uk-inline" href="" caption="">
+							<div class="uk-card-media-top">
+								<img id="cnbc-1-image7" src="" alt="">
+							</div>
+							<div class="uk-card-body">
+								<p id="cnbc-1-title7"></p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div uk-grid>
+				<div class="uk-width-1-2@m">
+					<h3 class="uk-heading-bullet">Real-time Stock Price</h3>
+					<table class="uk-table uk-table-divider uk-table-hover uk-table-responsive" uk-scrollspy="target: tr;cls: uk-animation-fade;delay: 500;">
+						<tr>
+							<th>Code</th><th>Price</th><th>Volume</th>
+						</tr>
+						<tr id="batchquote0">
+							<td></td><td></td><td></td>
+						</tr>
+						<tr id="batchquote1">
+							<td></td><td></td><td></td>
+						</tr>
+						<tr id="batchquote2">
+							<td></td><td></td><td></td>
+						</tr>
+						<tr id="batchquote3">
+							<td></td><td></td><td></td>
+						</tr>
+						<tr id="batchquote4">
+							<td></td><td></td><td></td>
+						</tr>
+					</table>
+					<small class="important">*Automatically updated every 10 mins</small>
+				</div>
+				<div class="uk-width-1-2@m">
+					<h3 class="uk-heading-bullet">US Stock Quote</h3>
+					<form id="quote" class="uk-search uk-search-default" onsubmit="singleQuote(document.getElementById('code').value);chart(document.getElementById('code').value);return false;">
+						<span class="uk-search-icon-flip" uk-search-icon></span>
+						<input id="code" class="uk-search-input" name="" type="search" placeholder="Enter US stock code e.g. fb">
+					</form>
+					<table class="uk-table uk-table-divider uk-table-hover uk-table-responsive" uk-scrollspy="target: tr;cls: uk-animation-fade;delay: 500;">
+						<tr>
+							<th>Code</th><td id="singlequote-code"></td>
+						</tr>
+						<tr>
+							<th>Close</th><td id="singlequote-close"></td>
+						</tr>
+						<tr>
+							<th>Range</th><td id="singlequote-range"></td>
+						</tr>
+						<tr>
+							<th>Volume</th><td id="singlequote-volume"></td>
+						</tr>
+						<tr>
+							<th>Open</th><td id="singlequote-open"></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<h3 class="uk-heading-bullet">Stock Chart</h3>
+			<div id="stockChart" uk-scrollspy="cls: uk-animation-fade;delay: 500;"></div>
+		</div>
+
+		<br>
+
+		<!-- job -->
+		<h1 id="job" class="uk-heading-divider">Job</h1>
+		<div>
+			<form id="searchJob" class="uk-search uk-search-default" onsubmit="job(document.getElementById('jobType').value);return false;">
+				<span class="uk-search-icon-flip" uk-search-icon></span>
+				<input id="jobType" class="uk-search-input" type="search" name="" placeholder="Enter a job title e.g. manager">
+			</form>
+			<table id="vacancy" class="uk-table uk-table-divider uk-table-hover uk-table-responsive uk-table-striped uk-table-small" uk-scrollspy="target: tr;cls: uk-animation-fade;delay: 500;">
+				<tr>
+					<th>Position</th><th>Location</th><th>Organization</th><th>Start</th><th>End</th>
+				</tr>
+			</table>
+		</div>
+
+		<br>
+
+		<!-- sports -->
+		<h1 id="sports" class="uk-heading-divider">Sports</h1>
+		<div>
+			<div class="uk-grid-collapse" uk-grid uk-scrollspy="target: div;cls: uk-animation-fade;delay: 500;">
+				<div class="uk-width-1-2@m">
+					<img id="espn-1-image0" src="">
+				</div>
+				<div class="uk-width-1-2@m">
+					<div class="uk-card-body">
+						<h3>World Cup In Russia...</h3>
+						<div class="uk-grid-small uk-child-width-auto" uk-grid uk-countdown="date: 2018-06-14T23:00:00+00:00">
+							<div>
+								<div class="uk-countdown-number uk-countdown-days"></div>
+								<div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">Days</div>
+							</div>
+							<div class="uk-countdown-separator">:</div>
+							<div>
+								<div class="uk-countdown-number uk-countdown-hours"></div>
+								<div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">Hours</div>
+							</div>
+							<div class="uk-countdown-separator">:</div>
+							<div>
+								<div class="uk-countdown-number uk-countdown-minutes"></div>
+								<div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">Minutes</div>
+							</div>
+							<div class="uk-countdown-separator">:</div>
+							<div>
+								<div class="uk-countdown-number uk-countdown-seconds"></div>
+								<div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">Seconds</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="uk-child-width-1-3@m" uk-grid uk-lightbox="animation: fade" uk-scrollspy="target: div;cls: uk-animation-fade;delay: 500;">
+				<div>
+					<div class="uk-card uk-card-default uk-card-hover">
+						<a id="espn-2-image1" class="uk-inline" href="" caption="">
+							<img id="espn-1-image1" src="" alt="">
+							<div class="uk-card-body">
+								<p id="espn-1-title1"></p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-hover">
+						<a id="espn-2-image2" class="uk-inline" href="" caption="">
+							<img id="espn-1-image2" src="" alt="">
+							<div class="uk-card-body">
+								<p id="espn-1-title2"></p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-hover">
+						<a id="espn-2-image3" class="uk-inline" href="" caption="">
+							<img id="espn-1-image3" src="" alt="">
+							<div class="uk-card-body">
+								<p id="espn-1-title3"></p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="uk-child-width-1-3@m" uk-grid uk-lightbox="animation: fade" uk-scrollspy="target: div;cls: uk-animation-fade;delay: 500;">
+				<div>
+					<div class="uk-card uk-card-default uk-card-hover">
+						<a id="espn-2-image4" class="uk-inline" href="" caption="">
+							<img id="espn-1-image4" src="" alt="">
+							<div class="uk-card-body">
+								<p id="espn-1-title4"></p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-hover">
+						<a id="espn-2-image5" class="uk-inline" href="" caption="">
+							<img id="espn-1-image5" src="" alt="">
+							<div class="uk-card-body">
+								<p id="espn-1-title5"></p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-hover">
+						<a id="espn-2-image6" class="uk-inline" href="" caption="">
+							<img id="espn-1-image6" src="" alt="">
+							<div class="uk-card-body">
+								<p id="espn-1-title6"></p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="uk-child-width-1-3@m" uk-grid uk-lightbox="animation: fade" uk-scrollspy="target: div;cls: uk-animation-fade;delay: 500;">
+				<div>
+					<div class="uk-card uk-card-default uk-card-hover">
+						<a id="espn-2-image7" class="uk-inline" href="" caption="">
+							<img id="espn-1-image7" src="" alt="">
+							<div class="uk-card-body">
+								<p id="espn-1-title7"></p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-hover">
+						<a id="espn-2-image8" class="uk-inline" href="" caption="">
+							<img id="espn-1-image8" src="" alt="">
+							<div class="uk-card-body">
+								<p id="espn-1-title8"></p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-hover">
+						<a id="espn-2-image9" class="uk-inline" href="" caption="">
+							<img id="espn-1-image9" src="" alt="">
+							<div class="uk-card-body">
+								<p id="espn-1-title9"></p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<br>
+
+		<!-- contact -->
+		<h1 id="contact" class="uk-heading-divider">Contact</h1>
+		<div>
+			<form method="post">
+				<fieldset>
+					<legend>Contact</legend>
+
+					<div class="uk-child-width-1-3@m" uk-grid uk-scrollspy="target: div;cls: uk-animation-fade;delay: 300;">
+						<div>
+							<div class="uk-margin">
+								<div class="uk-inline">
+									<span class="uk-form-icon" uk-icon="user"></span>
+									<input class="uk-input" type="text" name="name" placeholder="Name">
+								</div>
+							</div>
+							<div class="uk-margin">
+								<div class="uk-inline">
+									<span class="uk-form-icon" uk-icon="receiver"></span>
+									<input class="uk-input" type="text" name="phone" placeholder="Phone">
+								</div>
+							</div>
+							<div class="uk-margin">
+								<div class="uk-inline">
+									<span class="uk-form-icon" uk-icon="mail"></span>
+									<input class="uk-input" type="text" name="e-mail" placeholder="E-mail">
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="uk-margin">
+								<textarea class="uk-textarea" name="message" placeholder="Message" rows="3" cols="40"></textarea>
+							</div>
+							<input class="uk-button uk-button-default" type="submit" value="SEND" onclick="javascript: send();return false;">
+							<input class="uk-button uk-button-default" type="reset" value="RESET">
+						</div>
+
+						<div>
+							<div><span uk-icon="whatsapp"></span>&nbsp;&nbsp;<a href="tel: +85228222822">(852) 2822-2822</a></div>
+							<br>
+							<div><span uk-icon="mail"></span>&nbsp;&nbsp;<a href="mailto: info@orangedaily.com">info@orangedaily.com</a></div>
+							<br>
+							<div><span uk-icon="location"></span>&nbsp;&nbsp;3343 Industrial drive, Suite 2 Santa Rosa, CA. 95403-2060</div>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+
+			<!-- google map -->
+			<div id="map"></div>
+		</div>
+	</main>
+
+	<br>
+
+	<footer uk-navbar>
+		<div class="uk-navbar-left uk-navbar-item">
+			<small>&copy; 2018 Orange Daily</small>
+		</div>
+
+		<div class="uk-navbar-right">
+			<ul class="uk-navbar-nav uk-navbar-item">
+				<li><a href="https://www.facebook.com/" target="_blank" uk-icon="facebook"></a></li>
+				<li><a href="https://www.instagram.com/" target="_blank" uk-icon="instagram"></a></li>
+				<li><a href="https://www.youtube.com/" target="_blank" uk-icon="youtube"></a></li>
+				<!-- <li><a href="" target="_blank" uk-icon=""></a></li> -->
+			</ul>
+		</div>
+	</footer>
+</body>
+</html>
+
+<!-- references
+font:
+google font
+
+api:
+google map
+
+data feed:
+newsapi.org
+api.openweathermap.org
+alphavantage.co
+api.fixer.io
+US government
+
+chart:
+canvasjs
+
+video:
+youtube
+
+skill
+html5/css3/javascript
+jquery
+framework
+handle api
+plot chart
+parse json
+
+feature
+hide navigation bar in small devices (RWD)
+show toggle icon in small devices (RWD)
+add off-canvas sidebar
+add light box of each photo
+add data search function
+use google font
+use font icon
+add shadow under text & box
+use carousel to show photo
+stick the navigation bar to the top
+show the active item when scrolling to specific location
+scroll smoothly
+stick the scroll to top icon to the browser
+add google map
+add youtube video
+add icon & placeholder to the form
+pop out message when sent out
+add transition effect
+add count down
+add title icon
+automatically refresh for stock price in 10-min interval
+plot stock chart -->
