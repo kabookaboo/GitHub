@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Ryan Leung's Portfolio">
+	<meta name="keywords" content="ryan,ryan leung,portfolio,web design,freelance">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Ryan Leung's Portfolio</title>
+
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Codystar|Jura|Poiret+One|Rajdhani|Reenie+Beanie">
+	<link rel="stylesheet" type="text/css" href="css/uikit.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/uikit.min.js"></script>
+	<script type="text/javascript" src="js/uikit-icons.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaLaaURdDZxg4-VlDybKkbFtnsUE2cImk&language=en&callback=showMap" async defer></script>
+	<script type="text/javascript" src="js/countup.min.js"></script>
+</head>
+
+<body>
+	<header>
+		<!-- slider -->
+		<div id="home" class="uk-light uk-visible-toggle" uk-slideshow="animation: scale;autoplay: true;autoplay-interval: 5000;pause-on-hover: false;">
+			<ul class="uk-slideshow-items" uk-height-viewport>
+				<li class="uk-animation-kenburns">
+					<img src="image/slide.jpeg" alt="slide" uk-cover>
+					<div class="uk-overlay uk-position-center">
+						<h1 class="uk-animation-slide-top-medium">Hello, I'm<br><span>Ryan Leung</span></h1>
+						<h4 class="uk-animation-slide-bottom-medium">Web Designer &amp; Photographer</h4>
+					</div>
+				</li>
+				<li class="uk-animation-kenburns">
+					<img src="image/slide2.jpg" alt="slide" uk-cover>
+					<div class="uk-overlay uk-overlay-primary uk-position-center">
+						<h1 class="uk-animation-slide-left-medium">Passion makes me different.</h1>
+						<h4 class="uk-animation-slide-right-medium">Being passionate about my project.<br>Working hard to perfect my design.</h4>
+					</div>
+				</li>
+				<li class="uk-animation-kenburns">
+					<img src="image/slide3.jpeg" alt="slide" uk-cover>
+					<div class="uk-overlay uk-position-center">
+						<h1 class="uk-animation-slide-top-medium">Seeing the world,</h1>
+						<h1 class="uk-animation-slide-bottom-medium">from a different point of view</h1>
+					</div>
+				</li>
+				<li>
+					<img src="image/slide4.jpeg" alt="slide" uk-cover>
+					<div class="uk-overlay uk-overlay-primary uk-position-bottom">
+						<blockquote class="uk-animation-slide-left-medium">&quot;Design is not just what it looks like and feels like. Design is how it works.&quot;</blockquote>
+					</div>
+				</li>
+			</ul>
+
+			<a href="" class="uk-position-center-left uk-position-small uk-hidden-hover" uk-slideshow-item="previous" uk-slidenav-previous></a>
+			<a href="" class="uk-position-center-right uk-position-small uk-hidden-hover" uk-slideshow-item="next" uk-slidenav-next></a>
+
+			<div class="uk-position-bottom-center uk-position-small">
+				<ul class="uk-dotnav">
+					<li uk-slideshow-item="0"><a href=""></a></li>
+					<li uk-slideshow-item="1"><a href=""></a></li>
+					<li uk-slideshow-item="2"><a href=""></a></li>
+					<li uk-slideshow-item="3"><a href=""></a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- navigation bar -->
+		<nav class="uk-background-default" uk-navbar uk-sticky>
+			<div id="mainMenu" class="uk-navbar-right">
+				<ul class="uk-navbar-nav uk-navbar-item" uk-scrollspy-nav="closest: li;">
+					<li><a href="#home" uk-scroll>Home</a></li>
+					<li><a href="#about" uk-scroll>About</a></li>
+					<li><a href="#education" uk-scroll>Education</a></li>
+					<li><a href="#skill" uk-scroll>Skill</a></li>
+					<li><a href="#project" uk-scroll>Project</a></li>
+					<li><a href="#contact" uk-scroll>Contact</a></li>
+				</ul>
+			</div>
+
+			<div id="subMenu" class="uk-navbar-right">
+				<a class="uk-navbar-toggle" href="" uk-toggle="target: #slideMenu" uk-navbar-toggle-icon></a>
+			</div>
+			<div id="slideMenu" uk-offcanvas="mode: slide;overlay: true;flip: true;">
+				<div class="uk-offcanvas-bar uk-flex uk-flex-column">
+					<button class="uk-offcanvas-close" type="button" uk-close></button>
+
+					<ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical" uk-scrollspy-nav="closest: li;">
+						<li><a href="#home" uk-scroll>Home</a></li>
+						<li><a href="#about" uk-scroll>About</a></li>
+						<li><a href="#education" uk-scroll>Education</a></li>
+						<li><a href="#skill" uk-scroll>Skill</a></li>
+						<li><a href="#project" uk-scroll>Project</a></li>
+						<li><a href="#contact" uk-scroll>Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<div class="uk-container uk-container-expand">
+			<!-- about -->
+			<h1 id="about" class="uk-heading-line"><span>About</span></h1>
+
+			<div class="uk-card uk-card-default uk-grid-collapse uk-card-hover" uk-grid>
+				<div class="uk-card-media-left" uk-scrollspy="target: img;cls: uk-animation-fade;delay: 1000;repeat: true;">
+					<img id="self" src="image/self.jpg" alt="self">
+				</div>
+
+				<div class="uk-card-body uk-width-expand">
+					<table class="uk-table uk-table-divider uk-table-hover uk-table-responsive" uk-scrollspy="target: tr;cls: uk-animation-slide-top-small;delay: 300;repeat: true;">
+						<tr>
+							<td>Name</td><td>Ryan Leung</td>
+						</tr>
+						<tr>
+							<td>Gender</td><td>M</td>
+						</tr>
+						<tr>
+							<td>Hobby</td><td>Music, Photography, Travel, Football</td>
+						</tr>
+						<tr>
+							<td>Phone</td><td><a href="tel: +85262882128">(852) 6288-2128</a></td>
+						</tr>
+						<tr>
+							<td>E-mail</td><td><a href="mailto: s1124057@s.eduhk.hk">s1124057@s.eduhk.hk</a></td>
+						</tr>
+						<tr>
+							<td>Address</td><td>10 Lo Ping Road, Tai Po, New Territories, Hong Kong</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<br>
+
+			<!-- education -->
+			<h1 id="education" class="uk-heading-line"><span>Education</span></h1>
+
+			<div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
+				<div uk-scrollspy="cls: uk-animation-scale-down;delay: 1000;repeat: true;">
+					<div class="uk-card uk-card-default uk-card-body uk-card-hover">
+						<h3>2018 - The Education University of Hong Kong</h3>
+						<h3>BScEd in Science And Web Technology</h3>
+					</div>
+				</div>
+				<div uk-scrollspy="cls: uk-animation-scale-down;delay: 1500;repeat: true;">
+					<div id="youtube">
+						<iframe src="https://www.youtube.com/embed/Csb72lk4rEo?autoplay=1&mute=1&showinfo=0"></iframe>
+					</div>
+				</div>
+			</div>
+
+			<br>
+
+			<!-- skill -->
+			<h1 id="skill" class="uk-heading-line"><span>Skill</span></h1>
+
+			<div class="uk-child-width-1-2@s uk-grid-match" onmouseover="javascript: showProgress();" uk-grid>
+				<div>
+					<div class="uk-card uk-card-default uk-card-body uk-card-hover" uk-scrollspy="target: div;cls: uk-animation-fade;delay: 700;repeat: true;">
+						<div>
+							<h3 class="uk-card-title uk-text-center">Programming</h3>
+							<div class="uk-divider-icon"></div>
+						</div>
+						<div>
+							<span>HTML/CSS</span><progress class="uk-progress" value="20" max="100">100</progress>
+						</div>
+						<div>
+							<span>JavaScript/jQuery/AJAX</span><progress class="uk-progress" value="20" max="100">80</progress>
+						</div>
+						<div>
+							<span>JSON/XML</span><progress class="uk-progress" value="20" max="100">70</progress>
+						</div>
+						<div>
+							<span>SQL Server/MySQL</span><progress class="uk-progress" value="20" max="100">80</progress>
+						</div>
+						<div>
+							<span>PHP/ASP</span><progress class="uk-progress" value="20" max="100">100</progress>
+						</div>
+						<div>
+							<span>C++/C#/Java</span><progress class="uk-progress" value="20" max="100">100</progress>
+						</div>
+					</div>
+				</div>
+				
+				<div>
+					<div class="uk-card uk-card-default uk-card-body uk-card-hover" uk-scrollspy="target: div;cls: uk-animation-fade;delay: 700;repeat: true;">
+						<div>
+							<h3 class="uk-card-title uk-text-center">Language</h3>
+							<div class="uk-divider-icon"></div>
+						</div>
+						<div>
+							<span>Cantonese</span><progress class="uk-progress" value="20" max="100">100</progress>
+						</div>
+						<div>
+							<span>Mandarin</span><progress class="uk-progress" value="20" max="100">80</progress>
+						</div>
+						<div>
+							<span>English</span><progress class="uk-progress" value="20" max="100">80</progress>
+						</div>
+						<div>
+							<span>Japanese</span><progress class="uk-progress" value="20" max="100">50</progress>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<br>
+
+			<!-- project -->
+			<h1 id="project" class="uk-heading-line"><span>Project</span></h1>
+
+			<div class="uk-child-width-1-3@s" uk-grid uk-scrollspy="target: div;cls: uk-animation-fade;delay: 300;repeat: true;">
+				<div>
+					<div class="countUp uk-text-center"><h3 class="uk-card-title"><span id="count"></span>&nbsp;Customers</h3></div>
+					<div class="uk-card uk-card-default uk-card-hover">
+						<div class="uk-card-media-top">
+							<img src="image/project2.jpeg" alt="company web design">
+						</div>
+
+						<div class="uk-card-body">
+							<h3 class="uk-card-title">Company Web Design</h3>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="countUp uk-text-center"><h3 class="uk-card-title"><span id="count2"></span>&nbsp;Projects</h3></div>
+					<div class="uk-card uk-card-default uk-card-hover">
+						<div class="uk-card-media-top">
+							<img src="image/project.jpeg" alt="wedding photography">
+						</div>
+
+						<div class="uk-card-body">
+							<h3 class="uk-card-title">Wedding Photography</h3>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="countUp uk-text-center"><h3 class="uk-card-title"><span id="count3"></span>%&nbsp;Completed</h3></div>
+					<div class="uk-card uk-card-default uk-card-hover">
+						<div class="uk-card-media-top">
+							<img src="image/project3.png" alt="pos application design">
+						</div>
+
+						<div class="uk-card-body">
+							<h3 class="uk-card-title">POS Application Design</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<br>
+
+			<!-- contact -->
+			<h1 id="contact" class="uk-heading-line"><span>Contact</span></h1>
+			
+			<form method="post">
+				<fieldset>
+					<legend>Contact</legend>
+
+					<div class="uk-child-width-1-3@s" uk-grid uk-scrollspy="target: div;cls: uk-animation-fade;delay: 300;repeat: true;">
+						<div>
+							<div class="uk-margin">
+								<div class="uk-inline">
+									<span class="uk-form-icon" uk-icon="user"></span>
+									<input class="uk-input" type="text" name="name" placeholder="Name">
+								</div>
+							</div>
+							<div class="uk-margin">
+								<div class="uk-inline">
+									<span class="uk-form-icon" uk-icon="receiver"></span>
+									<input class="uk-input" type="text" name="phone" placeholder="Phone">
+								</div>
+							</div>
+							<div class="uk-margin">
+								<div class="uk-inline">
+									<span class="uk-form-icon" uk-icon="mail"></span>
+									<input class="uk-input" type="text" name="e-mail" placeholder="E-mail">
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="uk-margin">
+								<textarea class="uk-textarea" name="message" placeholder="Message" rows="3" cols="40"></textarea>
+							</div>
+							<input class="uk-button uk-button-default" type="submit" value="SEND" onclick="javascript: send();return false;">
+							<input class="uk-button uk-button-default" type="reset" value="RESET">
+						</div>
+
+						<div>
+							<div><span uk-icon="whatsapp"></span>&nbsp;&nbsp;<a href="tel: +85262882128">(852) 6288-2128</a></div>
+							<br>
+							<div><span uk-icon="mail"></span>&nbsp;&nbsp;<a href="mailto: s1124057@s.eduhk.hk">s1124057@s.eduhk.hk</a></div>
+							<br>
+							<div><span uk-icon="location"></span>&nbsp;&nbsp;10 Lo Ping Road, Tai Po, New Territories, Hong Kong</div>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+
+			<!-- google map -->
+			<div id="map"></div>
+		</div>
+	</main>
+
+	<br>
+	
+	<aside>
+		<div>
+			<button class="totop"><a href="#home" uk-scroll uk-totop>Top</a></button>
+		</div>
+	</aside>
+
+	<footer>
+		<nav class="uk-background-default" uk-navbar>
+			<div class="uk-navbar-left uk-navbar-item">
+				<small>&copy; 2018 Made By Ryan Leung</small>
+			</div>
+
+			<div class="uk-navbar-right">
+				<ul class="uk-navbar-nav uk-navbar-item">
+					<li><a href="https://www.facebook.com/leung.ryan1" target="_blank" uk-icon="facebook"></a></li>
+					<li><a href="https://twitter.com/ryangiggs_cc" target="_blank" uk-icon="twitter"></a></li>
+					<li><a href="https://www.instagram.com/ryan.leung/" target="_blank" uk-icon="instagram"></a></li>
+					<li><a href="https://www.youtube.com/user/csoryan0202" target="_blank" uk-icon="youtube"></a></li>
+				</ul>
+			</div>
+		</nav>
+	</footer>
+</body>
+</html>
+
+<!-- references
+font:
+google font
+
+api:
+google map
+countup.js
+
+image:
+pexels
+
+video:
+youtube -->
+
+<!-- skill
+html5/css3/javascript
+jquery
+framework
+handle api -->
+
+<!-- feature
+hide navigation bar in small devices
+show toggle icon in small devices
+use google font
+use font icon
+add shadow under text & box
+use carousel to show photo
+stick the navigation bar to the top
+show the active item when scrolling to specific location
+add animated underline effect to navigation items
+scroll smoothly
+stick the scroll to top icon to the browser
+add google map
+add youtube video
+visible on scrolling
+add icon & placeholder to the form
+pop out message when sent out
+add animated progress bar
+add count up effect
+add transition effect -->

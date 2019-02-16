@@ -1,0 +1,165 @@
+/*entire page*/
+*{
+	font-family: "Rajdhani";
+	line-height: 18px;
+	letter-spacing: 1.5px;
+}
+
+a:link,a:visited{
+	color: red;
+	text-decoration: none;
+}
+
+a:hover,a:active{
+	color: orange;
+}
+
+a.uk-navbar-toggle{
+	color: gray;
+}
+
+/*rwd*/
+#mainMenu{
+	display: none;
+}
+
+@media screen and (min-width: 800px){
+	#mainMenu{
+		display: block;
+	}
+
+	#subMenu{
+		display: none;
+	}
+}
+
+/*navigation bar*/
+.uk-background-default{
+	background-color: rgba(255,255,255,0.8);
+}
+
+.uk-offcanvas-bar{
+	box-shadow: 0px 0px 30px 10px white;
+	background-color: rgba(0,0,0,0.8);
+}
+
+.uk-navbar-nav>li>a{
+	display: inline;
+	font-family: "Jura";
+	font-size: 20px;
+}
+
+.uk-navbar-nav>li>a::after{
+	content: "";
+	display: block;
+	width: 0%;
+	height: 2px;
+	background-color: red;
+
+	transition-property: width;
+	transition-duration: 0.6s;
+	transition-timing-function: ease;
+}
+
+.uk-navbar-nav>li>a:hover::after{
+	width: 100%;
+}
+
+.uk-navbar-nav>li.uk-active>a{
+	color: red;
+}
+
+.uk-heading-line span{
+	font-family: "Jura";
+	font-weight: bold;
+}
+
+.uk-overlay-primary{
+	box-shadow: 0px 0px 30px 10px white;
+}
+
+.uk-overlay>h1,.uk-overlay>h4{
+	font-family: "Codystar";
+	font-weight: bold;
+	text-shadow: 5px 5px 5px black;
+}
+
+.uk-overlay>h1>span{
+	font-family: "Jura";
+	font-size: 50px;
+	font-weight: bold;
+	color: white;
+	text-shadow: 0px 0px 20px pink, 0px 0px 20px pink, 0px 0px 20px pink;
+}
+
+blockquote{
+	font-family: "Reenie Beanie";
+	font-size: 40px;
+	font-weight: bold;
+	color: white;
+	text-shadow: 0px 0px 20px pink, 0px 0px 20px pink, 0px 0px 20px pink;
+}
+
+/*other*/
+.uk-card-title{
+	font-family: "Jura";
+	font-size: 20px;
+}
+
+.uk-table-hover tbody tr:hover{
+	background-color: rgba(191, 255, 0, 0.5);
+}
+
+table,form,.uk-card-default{
+	font-size: 20px;
+}
+
+#self{
+	max-width: 500px;
+}
+
+.uk-input:focus,.uk-input:hover,.uk-textarea:focus,.uk-textarea:hover{
+	background-color: rgba(191, 255, 0, 0.5);
+}
+
+.uk-notification-message{
+	background-color: rgba(191, 255, 0, 1);
+}
+
+#map{
+	width: 100%;
+	height: 400px;
+}
+
+#youtube iframe{
+	height: 300px;
+	width: 100%;
+}
+
+aside{
+	position: fixed;
+	bottom: 70px;
+	right: 0px;
+	z-index: 1;
+}
+
+.totop{
+	background-color: rgba(191, 255, 0, 0.5);
+	width: 70px;
+	padding: 5px;
+	border: none;
+	border-radius: 5px 0px 0px 5px;
+	box-shadow: 0px 0px 30px 10px white;
+
+	transition-property: width;
+	transition-duration: 0.6s;
+	transition-timing-function: ease;
+}
+
+.totop:hover{
+	width: 100px;
+}
+
+[class*="countUp"] h3{
+	font-size: 1.5em;
+}
